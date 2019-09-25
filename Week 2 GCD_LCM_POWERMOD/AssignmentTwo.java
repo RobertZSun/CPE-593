@@ -1,6 +1,4 @@
 import java.lang.*;
-import java.io.IOException;
-import java.util.Scanner;
 
 /*
  * @Description:
@@ -29,14 +27,10 @@ public class AssignmentTwo {
         return product;
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter the second digit(a): ");
-        int a = Integer.parseInt(sc.next());
-        System.out.println("Please enter the second digit(b): ");
-        int b = Integer.parseInt(sc.next());
-        System.out.println("Please enter the third digit(r): ");
-        int r = Integer.parseInt(sc.next());
-        sc.close();
+        
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
+        int r = Integer.parseInt(args[2]);
         int c = GCD(a, b);
         System.out.println("The GCD of " + a + " and " + b + " is " + c);
         System.out.println("The LCM of " + a + " and " + b + " is " + Math.abs(a * b) / c);
