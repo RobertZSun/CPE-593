@@ -37,12 +37,14 @@ public class assignmentThree {
             return false;
         }
 
-        int frontNum = n - 1, exponentOfTwo = 0;while(frontNum%2==0)
+        int frontNum = n - 1, exponentOfTwo = 0;
+        while(frontNum%2==0)
         {
             frontNum /= 2;
             exponentOfTwo++;
         }
-        int loopTime = 6;out:for(
+        int loopTime = 6;
+        out:for(
         int i = 0;i<loopTime;i++)
         {
         int randomNum_a = random.nextInt(n - 2) + 2;
@@ -60,7 +62,8 @@ public class assignmentThree {
             }
         }
         return false;
-    }return true;
+    }
+    return true;
     }
 
     public static void main(String[] args) {

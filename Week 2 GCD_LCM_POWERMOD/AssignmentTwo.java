@@ -1,5 +1,3 @@
-import java.lang.*;
-
 /*
  * @Description:
  * @Author: Zhe Sun
