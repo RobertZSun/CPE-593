@@ -1,4 +1,3 @@
-
 /*
  * @Description:
  * Use the Miller Rabin algorithm together with power mod
@@ -9,20 +8,26 @@
  * @LastEditors: Zhe Sun
  * @LastEditTime: 2019-09-24 14:45:41
  */
+import java.math.BigInteger;
 import java.util.Random;
+//16769023
 
 public class assignmentThree {
 
     public static long powerMod(int x, int n, int m) {
-        long product = 1;
+        long result;
+        BigInteger product = new BigInteger("1");
+        BigInteger mb = BigInteger.valueOf(m);
+        BigInteger xb = BigInteger.valueOf(x);
         while (n > 0) {
             if (n % 2 != 0) {
-                product = product * x % m;
+                product = product.multiply(xb).remainder(mb);
             }
-            x = x * x % m;
+            xb = xb.multiply(xb).remainder(mb);
             n /= 2;
         }
-        return product;
+        result = product.longValue();
+        return result;
     }
 
     public static boolean miller_rabin(int n) throws Exception {
